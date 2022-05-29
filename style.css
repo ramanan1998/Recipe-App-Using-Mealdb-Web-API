@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Indie+Flower&family=Love+Ya+Like+A+Sister&family=Open+Sans:ital,wght@0,300;0,700;1,400&family=Passions+Conflict&display=swap');
+*{
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+:root{
+    --green: green;
+    --shadow: rgba(23, 29, 23, 0.459);
+    --yellow: rgba(255, 166, 0, 0.884);
+
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 20px;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--green);
+    height: 50px;
+    width: 100%;
+    z-index: 10;
+    border-top: 10px solid var(--yellow);
+    border-bottom: 10px solid var(--yellow);
+}
+div.navbanner{
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+div.navbanner:hover{
+    font-weight: 900;
+    color: var(--yellow);
+}
+div.favourite_cart{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: inherit;
+    cursor: pointer;
+}
+div.cartitems{
+    position: absolute;
+    top: 8px;
+    right: 4px;
+    text-align: center;
+    padding: 2px;
+    font-size: 7px;
+    height: 9px;
+    width: 9px;
+    border-radius: 9px;
+    background-color: gray;
+}
+div.banner{
+    background: url(/images/crispy_chicken.jpg) center no-repeat;
+    background-size: cover;
+    height: 50vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+div.small_banner{
+    background-color: var(--shadow);
+    height: 75px;
+    width: 100vw;
+    text-align: center;
+}
+.small_banner h1{
+    font-family: 'Passions Conflict', cursive;
+    font-weight: 900;
+    font-size: 50px;
+    color: var(--yellow);
+    cursor: pointer;
+    animation: 2s ease-in-out slide;
+
+}
+@keyframes slide{
+    from{
+        transform: translateY(-100%);
+        
+    }
+    to{
+        transform: translateY(0%);
+        
+    }
+    
+}
+.small_banner h1:hover{
+    text-shadow: 2px 2px 2px black;
+}
+.small_banner h5{
+    color: rgba(255, 255, 255, 0.658);
+    word-spacing: -1px;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    cursor: pointer;
+
+}
+.small_banner h1:hover{
+    transform: scale(1.02);
+    transition: 0.2s ease-out;
+}
+
+nav.menu_items{
+    height: 50px;
+    background-color: var(--green);
+    border-top: 10px solid var(--yellow);
+    border-bottom: 10px solid var(--yellow);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu_items ul li{
+    display: inline-block;
+    padding: 10px;
+    margin: 0 5px;
+}
+.menu_items ul li .menu{
+    color: white;
+    font-size: 20px;
+    border: none;
+    background: none;
+    font-family: 'Love Ya Like A Sister', cursive;
+    cursor: pointer;
+}
+.menu_items ul li .menu:hover{
+    color: var(--yellow);
+}
+.menu_items ul li .foc{
+    color: var(--yellow);
+}
+div.product_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 80%;
+    padding: 20px;
+    margin: 0 auto;
+}
+.home_contents{
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    width: auto;
+    font-size: 20px;
+    font-family: 'Love Ya Like A Sister', cursive;
+    color: var(--yellow);
+    padding: 50px;
+}
+.home_contents_para{
+    margin-right: 100px;
+    width: 400px;
+}
+.home_contents img{
+    height: 300px;
+    width: 450px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+.home_contents img:hover{
+    box-shadow: 3px 3px 10px var(--shadow);
+    transform: scale(1.02);
+}
+.products{
+    height: 300px;
+    width: 280px;
+    background-color: whitesmoke;
+    font-family: 'Acme', sans-serif;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;           /* It will hide the overflow zooming effect of image when it reach outside the viewport*/
+}
+.products:hover{
+    transform: scale(1.02);
+    box-shadow: 3px 3px 10px var(--shadow);
+}
+.product{
+    margin-top: -33px;
+    height: 180px;
+    width: inherit;
+    transition: transform 0.4s;
+}
+
+div.product_info{
+    margin-top: 10px;
+    height: 60px;
+    width: inherit;
+    font-size: large;
+    line-height: 30px;
+    text-align: center;
+    color: var(--yellow);
+}
+
+.upper_buttons{
+    position: relative;
+    z-index: 1;
+}
+.like{
+    float: right;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.liked{
+    color: red;
+}
+.get_recipe{
+    padding: 0 5px;
+    background-color: var(--green);
+    height: 30px;
+    color: var(--yellow);
+    font-family: 'Acme', sans-serif;
+    font-size: 15px;
+    line-height: 30px;
+}
+.recipe_button{
+    color: var(--yellow);
+    cursor: pointer;
+}
+span{
+    float: right;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 30px;
+    height: 50px;
+    width: auto;
+    background-color: var(--green);
+    color: white;
+    line-height: 50px;
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 20px;
+    border-top: 10px solid var(--yellow);
+    border-bottom: 10px solid var(--yellow);
+}
+
